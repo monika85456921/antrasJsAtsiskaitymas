@@ -19,6 +19,7 @@ function isBigger(number1, number2){
     } else if (number2 > number1) {
         console.log(`Antras skaicius yra didesnis`);
     } else{
+        console.log("Sakiciai lygus");
         return number1 + number2;
     }
 }
@@ -46,16 +47,33 @@ function arTrikampisLygiakrastis(krastineA, krastineB, krastineC){
 }
 arTrikampisLygiakrastis(18,18,antrosUzdAts);
 
-//5uzd
-// function kvadratoPlotas(){
-//     let krastine = prompt('Ivesti krastine ilgi: ');
-//     return krastine*krastine;
-// }
-// alert(kvadratoPlotas());
+// 5uzd
+let figura = prompt("Iveskite figuros pav: ");
+function plotas(figura){
+    if (figura === "kvadratas"){
+        function kvadratas(){
+        let krastine = prompt('Ivesti krastines ilgi: ');
+        console.log(krastine*krastine);
+        alert(krastine*krastine);
+    }
+    return kvadratas();
+    } else if (figura === "staciakampis"){
+        function staciakampis(){
+            let krastine1 = prompt('Ivesti krastine A ilgi: ');
+            let krastine2 = prompt('Ivesti krastine B ilgi: ');
+            let plotas = krastine1 * krastine2;
+            console.log(plotas);
+            alert(plotas)
+        }
+        return staciakampis();
+    }
+}
+plotas(figura);
+
 
 
 //6
-function isSeven(x){return x=="7"? true : false ;}
+function isSeven(x){return x =="7"? true : false ;}
 
 let arSeptyni = isSeven(7);
 console.log(arSeptyni);
